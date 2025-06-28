@@ -1,0 +1,16 @@
+C:/TouchGFXProjects/BanTrung/Core/Src/stm32f4xx_hal_msp.c:66:6:HAL_MspInit	1
+C:/TouchGFXProjects/BanTrung/Core/Src/stm32f4xx_hal_msp.c:91:6:HAL_CRC_MspInit	2
+C:/TouchGFXProjects/BanTrung/Core/Src/stm32f4xx_hal_msp.c:114:6:HAL_CRC_MspDeInit	2
+C:/TouchGFXProjects/BanTrung/Core/Src/stm32f4xx_hal_msp.c:136:6:HAL_DMA2D_MspInit	2
+C:/TouchGFXProjects/BanTrung/Core/Src/stm32f4xx_hal_msp.c:162:6:HAL_DMA2D_MspDeInit	2
+C:/TouchGFXProjects/BanTrung/Core/Src/stm32f4xx_hal_msp.c:187:6:HAL_I2C_MspInit	2
+C:/TouchGFXProjects/BanTrung/Core/Src/stm32f4xx_hal_msp.c:236:6:HAL_I2C_MspDeInit	2
+C:/TouchGFXProjects/BanTrung/Core/Src/stm32f4xx_hal_msp.c:267:6:HAL_LTDC_MspInit	3
+C:/TouchGFXProjects/BanTrung/Core/Src/stm32f4xx_hal_msp.c:393:6:HAL_LTDC_MspDeInit	2
+C:/TouchGFXProjects/BanTrung/Core/Src/stm32f4xx_hal_msp.c:455:6:HAL_SPI_MspInit	2
+C:/TouchGFXProjects/BanTrung/Core/Src/stm32f4xx_hal_msp.c:493:6:HAL_SPI_MspDeInit	2
+C:/TouchGFXProjects/BanTrung/Core/Src/stm32f4xx_hal_msp.c:523:6:HAL_TIM_Base_MspInit	3
+C:/TouchGFXProjects/BanTrung/Core/Src/stm32f4xx_hal_msp.c:550:6:HAL_TIM_MspPostInit	2
+C:/TouchGFXProjects/BanTrung/Core/Src/stm32f4xx_hal_msp.c:582:6:HAL_TIM_Base_MspDeInit	3
+C:/TouchGFXProjects/BanTrung/Core/Src/stm32f4xx_hal_msp.c:717:6:HAL_SDRAM_MspInit	2
+C:/TouchGFXProjects/BanTrung/Core/Src/stm32f4xx_hal_msp.c:803:6:HAL_SDRAM_MspDeInit	2

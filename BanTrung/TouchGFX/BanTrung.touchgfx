@@ -1,0 +1,370 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "Screen1",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "background",
+            "Width": 240,
+            "Height": 320,
+            "RelativeFilename": "background.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "button1",
+            "X": 70,
+            "Y": 115,
+            "Width": 100,
+            "Height": 91,
+            "Pressed": "start.png",
+            "Released": "start.png"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "button1"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionCover",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "Screen2"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Screen2",
+        "CanvasBufferSize": 3600,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "background",
+            "Width": 240,
+            "Height": 320,
+            "RelativeFilename": "background.png"
+          },
+          {
+            "Type": "Line",
+            "Name": "death_line",
+            "Y": 238,
+            "Width": 240,
+            "Height": 15,
+            "Color": {
+              "Red": 71,
+              "Green": 27,
+              "Blue": 26
+            },
+            "StartY": 15.0,
+            "EndX": 240.0,
+            "EndY": 15.0,
+            "LineWidth": 15.0,
+            "LineEndingStyle": "Square"
+          },
+          {
+            "Type": "Circle",
+            "Name": "red",
+            "X": 24,
+            "Width": 24,
+            "Height": 24,
+            "Visible": false,
+            "Color": {
+              "Red": 255
+            },
+            "CenterX": 12.0,
+            "CenterY": 12.0,
+            "Radius": 12.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "yellow",
+            "X": 48,
+            "Width": 24,
+            "Height": 24,
+            "Visible": false,
+            "Color": {
+              "Red": 255,
+              "Green": 255
+            },
+            "CenterX": 12.0,
+            "CenterY": 12.0,
+            "Radius": 12.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "green",
+            "Width": 24,
+            "Height": 24,
+            "Visible": false,
+            "Color": {
+              "Green": 255
+            },
+            "CenterX": 12.0,
+            "CenterY": 12.0,
+            "Radius": 12.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "bullet_ball",
+            "Width": 240,
+            "Height": 320,
+            "Color": {
+              "Green": 255
+            },
+            "CenterX": 120.0,
+            "CenterY": 270.0,
+            "Radius": 12.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "Back",
+            "X": 208,
+            "Y": 288,
+            "Width": 32,
+            "Height": 32,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "IconReleased": "back.png",
+                "IconPressed": "back.png"
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "scoreArea",
+            "Y": 296,
+            "Width": 86,
+            "Height": 20,
+            "TextId": "__SingleUse_9WI8",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 77,
+              "Green": 255
+            },
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "score",
+              "UseBuffer": true,
+              "BufferSize": 20
+            }
+          },
+          {
+            "Type": "SvgImage",
+            "Name": "arrow_svg",
+            "Width": 240,
+            "Height": 320,
+            "Image": "blue-arrow-svg.svg",
+            "ImagePositionX": 120.0,
+            "ImagePositionY": 230.0,
+            "ImageHorizontalScale": 0.2,
+            "ImageVerticalScale": 0.1,
+            "RotationCenterX": 120.0,
+            "RotationCenterY": 256.0
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "backtoMenu",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Back"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionWipe",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "Screen1"
+            }
+          },
+          {
+            "InteractionName": "tickEvent",
+            "Trigger": {
+              "Type": "TriggerOnEveryTick",
+              "TickCount": 1
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "tickEvent"
+            }
+          },
+          {
+            "InteractionName": "lose_game",
+            "Trigger": {
+              "Type": "TriggerWhen",
+              "ActionCustomTypeName": "Call Screen2 lose_screen"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Screen3"
+            }
+          }
+        ],
+        "CustomActions": [
+          {
+            "Name": "lose_screen"
+          }
+        ]
+      },
+      {
+        "Name": "Screen3",
+        "Components": [
+          {
+            "Type": "FlexButton",
+            "Name": "Back",
+            "X": 208,
+            "Y": 288,
+            "Width": 32,
+            "Height": 32,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "IconReleased": "back.png",
+                "IconPressed": "back.png"
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "scoreArea",
+            "X": 77,
+            "Y": 254,
+            "Width": 86,
+            "Height": 20,
+            "TextId": "__SingleUse_7ZZH",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 77,
+              "Green": 255
+            },
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "score",
+              "UseBuffer": true,
+              "BufferSize": 20
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "game_over1",
+            "X": 53,
+            "Y": 201,
+            "Width": 134,
+            "Height": 36,
+            "TextId": "__SingleUse_5MBF",
+            "TextRotation": "0",
+            "Color": {
+              "Green": 167,
+              "Blue": 250
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "game_over",
+            "X": 60,
+            "Y": 66,
+            "Width": 120,
+            "Height": 120,
+            "RelativeFilename": "game_over.png"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "back",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Back"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "Screen1"
+            }
+          }
+        ]
+      }
+    ],
+    "CustomContainerDefinitions": [],
+    "Name": "BanTrung",
+    "Resolution": {
+      "Width": 240,
+      "Height": 320
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "Screen1",
+    "SelectedStartupLanguage": "GB",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      16
+    ],
+    "AvailableLCDs": {
+      "16": "LCD16bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 240,
+        "Height": 320
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "CompileTargetCommandOverride": "make -f ../gcc/Makefile -j8",
+    "FlashTargetCommandOverride": "make -f ../gcc/Makefile flash",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Portrait",
+    "Family": "STM32F4",
+    "SubFamily": "STM32F429/439",
+    "Toolchain": "STM32CubeIDE",
+    "Platform": "m4",
+    "ProjectFile": "../STM32F429I_DISCO_REV_D01.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": [],
+    "AdditionalFeatures": [
+      "CWRVector",
+      "VectorFonts"
+    ]
+  },
+  "Version": "4.25.0",
+  "CreatedBy": "4.25.0"
+}

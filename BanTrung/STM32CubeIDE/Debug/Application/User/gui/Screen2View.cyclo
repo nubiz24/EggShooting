@@ -1,0 +1,15 @@
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
+C:/TouchGFXProjects/BanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:232:6:virtual void Screen2View::tearDownScreen()	1
+../../TouchGFX/gui/include/gui/screen2_screen/Screen2View.hpp:69:13:Screen2View::~Screen2View()	2
+../../TouchGFX/gui/include/gui/screen2_screen/Screen2View.hpp:69:13:virtual Screen2View::~Screen2View()	1
+../../TouchGFX/gui/include/gui/screen2_screen/Screen2View.hpp:86:10:void Screen2View::reset_bfs()	1
+C:/TouchGFXProjects/BanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:13:10:uint32_t xorshift32()	2
+C:/TouchGFXProjects/BanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:72:1:Screen2View::Screen2View()	3
+C:/TouchGFXProjects/BanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:77:6:void Screen2View::init_circle(touchgfx::Circle&, int, int, const touchgfx::PainterRGB565&)	2
+C:/TouchGFXProjects/BanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:93:6:void Screen2View::add_queue(int, int, int, int, bool)	9
+C:/TouchGFXProjects/BanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:108:5:int Screen2View::bfs1(int, int)	4
+C:/TouchGFXProjects/BanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:139:6:void Screen2View::bfs2()	8
+C:/TouchGFXProjects/BanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:184:6:void Screen2View::fall_down(touchgfx::Circle&)	4
+C:/TouchGFXProjects/BanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:194:6:virtual void Screen2View::setupScreen()	7
+C:/TouchGFXProjects/BanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:237:6:virtual void Screen2View::tickEvent()	68
