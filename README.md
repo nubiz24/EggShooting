@@ -1,7 +1,4 @@
 # EggShooting
-
-version của các tool dùng để phát triển project, ...)
-
 1. Cách cài đặt:
 
 - Clone project trên github
