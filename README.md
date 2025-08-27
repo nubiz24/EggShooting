@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # EggShooting
 =======
 # EggShooting - Xây dựng game bắn trứng trên kit STM32F429ZIT6
