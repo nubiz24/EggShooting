@@ -21,4 +21,4 @@ Build: 24813_20250409_2138 (UTC)
 3. Cách sử dụng:
   - Sau khi nạp được code và cắm được mạch, 3 button ứng với các chức năng : PG2 - Sang trái, PG3 - Sang phải, PA14 - Bắn trứng
  
->>>>>>> bfdee5a1c5bceee5773f2708ebde6de63dd7f583
+>>>>>>> 
