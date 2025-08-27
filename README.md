@@ -1,7 +1,7 @@
 # EggShooting
 =======
 # EggShooting - Xây dựng game bắn trứng trên kit STM32F429ZIT6
->>>>>>> bfdee5a1c5bceee5773f2708ebde6de63dd7f583
+>>>>>>> 
 1. Cách cài đặt:
 - Clone project trên github
 - Vào folder STM32CubeIDE
